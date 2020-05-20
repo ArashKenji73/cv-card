@@ -1,0 +1,70 @@
+header {
+    display: inline-block;
+    width: 100%;
+    height: 56px;
+    background-color: $main-color;
+    margin-top: 25px;
+    padding: 8px 16px;
+    @include border-radius($border-radius);
+
+    .content {
+        @extend header-content;
+    }
+
+}
+
+
+
+header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+$margin-left: 12px;
+
+#menu-btn {
+    margin-left: $margin-left;
+
+    rect {
+        fill: $menuBtn-color;
+    }
+}
+
+.profile-img {
+    $size: 40px;
+    width: $size;
+    height: $size;
+    background: $light-pink;
+    margin-left: $margin-left;
+    @include border-radius($size);
+}
+
+.profile-name {
+    color: $menuBtn-color;
+    font-family: vazir-bold;
+
+    &::after {
+        content: "";
+        background-color: $light-pink;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 5px;
+        height: 6px;
+        width: 6px;
+    }
+}
+
+.profile-phone{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    path{
+        fill: $menuBtn-color;
+    }
+}
+
+
+

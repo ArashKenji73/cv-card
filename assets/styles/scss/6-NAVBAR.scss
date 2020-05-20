@@ -1,0 +1,15 @@
+nav{
+    display: inline-block;
+    color: #fff;
+    background: #4a63e7;
+    min-height: 620px;
+    max-height: 620px;
+    top: 25px;
+    overflow: hidden;
+    position: fixed;
+    width: $navbar-width;
+    margin-left: 36px;
+    right: -($navbar-width + 25px);
+    
+    @include border-radius($border-radius);
+}

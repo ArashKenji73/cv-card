@@ -2,10 +2,16 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  direction: rtl;
+  text-align: right;
 }
 
 ol, ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:focus {
@@ -20,17 +26,99 @@ a:hover {
   outline: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  background: #eee;
+  min-height: 100vh;
+  width: 100vw;
+}
+
 body {
   padding: 0px 15px;
-  min-height: 100vh;
-  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: vazir-bold;
+  src: url(../fonts/Vazir-Bold.ttf);
+}
+.site-wrapper[data-open=true] {
+  transform: translateX(-295px);
 }
 
 header {
-  display: flex;
+  display: inline-block;
   width: 100%;
   height: 56px;
   background-color: #4a63e7;
+  margin-top: 25px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+header-content, header .content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#menu-btn {
+  margin-left: 12px;
+}
+#menu-btn rect {
+  fill: #fff;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  background: #ff5959;
+  margin-left: 12px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+}
+
+.profile-name {
+  color: #fff;
+  font-family: vazir-bold;
+}
+.profile-name::after {
+  content: "";
+  background-color: #ff5959;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  height: 6px;
+  width: 6px;
+}
+
+.profile-phone {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.profile-phone path {
+  fill: #fff;
+}
+
+nav {
+  display: inline-block;
+  color: #fff;
+  background: #4a63e7;
+  min-height: 620px;
+  max-height: 620px;
+  top: 25px;
+  overflow: hidden;
+  position: fixed;
+  width: 265px;
+  margin-left: 36px;
+  right: -290px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
