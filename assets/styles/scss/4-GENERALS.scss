@@ -8,6 +8,7 @@ body {
 
 body {
     padding: $body-padding;
+    font-family: sans-serif;
 }
 
 
@@ -20,23 +21,99 @@ body {
 
 
 
+
+@include fontSelector(IRANSans-Light, IRANSans, 'Light');
+
 @include fontSelector(IRANSans-Light, IRANSans, 'Light');
 
 @include fontSelector(IRANSans-Medium, IRANSans, 'Medium');
 
-@include fontSelector(IRANSans-Bold, IRANSans, 'Bold');
+@include fontSelector(IRANSans-UltraLight, IRANSans, 'UltraLight');
 
 
 
 
 
+.title {
+    position: relative;
+    color: $white;
+    font-family: vazir-bold;
+
+    &::after {
+
+        position: absolute;
+        bottom: 6px;
+        content: "";
+        background-color: $light-pink;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+        height: 6px;
+        width: 6px;
+    }
+}
+
+.subtitle {
+    font-size: 14px !important;
+    color: #fff;
+    font-family: IRANSans-UltraLight;
+    line-height: 1.9em;
+    margin-bottom: 24px;
+
+}
+
+
+.cta-wrapper {
+    display: flex;
+    align-items: center;
+
+    .btn:first-child {
+        margin-right: 0px;
+    }
+
+    .btn {
+        margin-right: 8px;
+    }
+}
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    color: $white;
+    font-size: 14px;
+    font-family: vazir-thin;
+    
+    &.btn-rounded{
+        @include border-radius(100px);
+    }
+    
+    &.btn-primary{
+        border: 2px solid transparent;
+        background: $light-pink;
+    }
+    
+    &.btn-secondary{
+        border: 2px solid $white;
+    }
+    
+}
 
 
 
-.site-wrapper{
+section {
+    padding: 0px 20px;
+    margin: 15px 0px;
+    @include border-radius($border-radius);
+}
+
+.site-wrapper {
     transform: translateX(0px);
     transition: transform 0.3s ease-in-out;
-    &[data-open="true"]{
+
+    &[data-open="true"] {
         transform: translateX(-($navbar-width + 25px));
     }
 }

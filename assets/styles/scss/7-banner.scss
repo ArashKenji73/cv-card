@@ -1,0 +1,40 @@
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $main-color;
+    height: 500px;
+
+    .title {
+        font-size: 36px;
+        &::after {
+            bottom: 30px;
+            content: "";
+            margin-right: 6px;
+        }
+    }
+    
+    .subtitle{
+        animation-delay: 1.7s;
+    }
+    
+    
+    .cta-wrapper{
+        animation-delay: 2.1s;
+    }
+
+
+    #svg-name {
+        
+        width: 236px;
+        stroke-dasharray: 650;
+        stroke-dashoffset: 650;
+        animation: fadeInBanner 2.5s ease-in forwards;
+        fill: none;
+        stroke: white;
+        stroke-width: 2px;
+        /*            animation-fill-mode: forwards*/
+    }
+
+    
+}

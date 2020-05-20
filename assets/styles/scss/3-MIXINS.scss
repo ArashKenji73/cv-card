@@ -1,7 +1,7 @@
 @mixin border-radius($radius) {
-	border-radius: $radius;
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
 }
 
 
@@ -11,4 +11,33 @@
         font-family: $font-family;
         src: url("../fonts/#{$font-name}-#{$font-weight}.ttf");
     }
+}
+
+
+
+
+
+@keyframes fadeInBanner {
+    to {
+        stroke-dashoffset: 0;
+        stroke-width: 0px;
+        fill: white;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+.fadeIn{
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 0.3s ease-in forwards;
 }

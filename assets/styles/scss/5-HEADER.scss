@@ -55,20 +55,7 @@ header-content {
         @include border-radius($size);
     }
 
-    .profile-name {
-        color: $white;
-        font-family: vazir-bold;
 
-        &::after {
-            content: "";
-            background-color: $light-pink;
-            border-radius: 50%;
-            display: inline-block;
-            margin-left: 5px;
-            height: 6px;
-            width: 6px;
-        }
-    }
 
     .profile-phone {
         display: flex;
