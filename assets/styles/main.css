@@ -73,6 +73,16 @@ header-content, header .content {
 }
 #menu-btn rect {
   fill: #fff;
+  transition: all 0.3s;
+}
+#menu-btn[data-open=true] rect:nth-child(1) {
+  transform: matrix(-0.707107, 0.707107, 0.707107, 0.707107, 17.6777, 0);
+}
+#menu-btn[data-open=true] rect:nth-child(2) {
+  display: none;
+}
+#menu-btn[data-open=true] rect:nth-child(3) {
+  transform: matrix(-0.707107, -0.707107, -0.707107, 0.707107, 20.5061, 17.6777);
 }
 
 .profile-img {

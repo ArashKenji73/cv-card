@@ -27,9 +27,26 @@ $margin-left: 12px;
 
 #menu-btn {
     margin-left: $margin-left;
-
+    
     rect {
         fill: $menuBtn-color;
+        transition: all 0.3s;
+    }
+    
+    
+    &[data-open="true"]{
+    
+        rect:nth-child(1){
+            transform : matrix(-0.707107, 0.707107, 0.707107, 0.707107, 17.6777, 0);
+        }
+        
+        rect:nth-child(2){
+            display: none;
+        }
+        
+        rect:nth-child(3){
+            transform : matrix(-0.707107, -0.707107, -0.707107, 0.707107, 20.5061, 17.6777);
+        }
     }
 }
 
