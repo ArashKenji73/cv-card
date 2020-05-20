@@ -14,74 +14,69 @@ header {
 }
 
 
-
+$margin-left: 12px;
 header-content {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
-}
 
+    #menu-btn {
+        margin-left: $margin-left;
 
-$margin-left: 12px;
-
-#menu-btn {
-    margin-left: $margin-left;
-    
-    rect {
-        fill: $menuBtn-color;
-        transition: all 0.3s;
-    }
-    
-    
-    &[data-open="true"]{
-    
-        rect:nth-child(1){
-            transform : matrix(-0.707107, 0.707107, 0.707107, 0.707107, 17.6777, 0);
+        rect {
+            fill: $white;
+            transition: all 0.3s;
         }
-        
-        rect:nth-child(2){
-            display: none;
-        }
-        
-        rect:nth-child(3){
-            transform : matrix(-0.707107, -0.707107, -0.707107, 0.707107, 20.5061, 17.6777);
+
+
+        &[data-open="true"] {
+
+            rect:nth-child(1) {
+                transform: matrix(-0.707107, 0.707107, 0.707107, 0.707107, 17.6777, 0);
+            }
+
+            rect:nth-child(2) {
+                display: none;
+            }
+
+            rect:nth-child(3) {
+                transform: matrix(-0.707107, -0.707107, -0.707107, 0.707107, 20.5061, 17.6777);
+            }
         }
     }
-}
 
-.profile-img {
-    $size: 40px;
-    width: $size;
-    height: $size;
-    background: $light-pink;
-    margin-left: $margin-left;
-    @include border-radius($size);
-}
+    .profile-img {
+        $size: 40px;
+        width: $size;
+        height: $size;
+        background: $light-pink;
+        margin-left: $margin-left;
+        @include border-radius($size);
+    }
 
-.profile-name {
-    color: $menuBtn-color;
-    font-family: vazir-bold;
+    .profile-name {
+        color: $white;
+        font-family: vazir-bold;
 
-    &::after {
-        content: "";
-        background-color: $light-pink;
-        border-radius: 50%;
-        display: inline-block;
-        margin-left: 5px;
-        height: 6px;
-        width: 6px;
+        &::after {
+            content: "";
+            background-color: $light-pink;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 5px;
+            height: 6px;
+            width: 6px;
+        }
+    }
+
+    .profile-phone {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+
+        path {
+            fill: $white;
+        }
     }
 }
-
-.profile-phone{
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-    path{
-        fill: $menuBtn-color;
-    }
-}
-
-
-

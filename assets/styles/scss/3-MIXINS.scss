@@ -3,3 +3,12 @@
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 }
+
+
+
+@mixin fontSelector($font-family, $font-name, $font-weight) {
+    @font-face {
+        font-family: $font-family;
+        src: url("../fonts/#{$font-name}-#{$font-weight}.ttf");
+    }
+}

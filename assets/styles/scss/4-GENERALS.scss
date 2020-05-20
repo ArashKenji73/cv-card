@@ -11,10 +11,24 @@ body {
 }
 
 
-@font-face {
-  font-family: vazir-bold;
-  src: url(../fonts/Vazir-Bold.ttf);
-}
+@include fontSelector(vazir-bold, Vazir, 'Bold');
+
+@include fontSelector(vazir-thin, Vazir, 'Thin');
+
+@include fontSelector(vazir-light, Vazir, 'Light');
+
+
+
+
+@include fontSelector(IRANSans-Light, IRANSans, 'Light');
+
+@include fontSelector(IRANSans-Medium, IRANSans, 'Medium');
+
+@include fontSelector(IRANSans-Bold, IRANSans, 'Bold');
+
+
+
+
 
 
 
@@ -23,6 +37,6 @@ body {
     transform: translateX(0px);
     transition: transform 0.3s ease-in-out;
     &[data-open="true"]{
-        transform: translateX(-($navbar-width + 30px));
+        transform: translateX(-($navbar-width + 25px));
     }
 }
