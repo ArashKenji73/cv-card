@@ -2,8 +2,6 @@ let MenuBtn = document.getElementById('menu-btn');
 
 let siteWrapper = document.getElementsByClassName('site-wrapper')[0];
 
-//console.log(MenuBtn);
-
 
 MenuBtn.addEventListener("click",function(){
    
@@ -29,3 +27,6 @@ function toggleMenu(){
     
     
 }
+
+
+export { toggleMenu };
