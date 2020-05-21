@@ -129,7 +129,7 @@ body {
   padding: 10px 24px;
   color: #fff;
   font-size: 12px;
-  font-family: vazir-thin;
+  font-family: vazir-bold;
 }
 .btn.btn-rounded {
   border-radius: 100px;
@@ -336,11 +336,13 @@ nav-container .footer, nav .container .footer {
   width: 236px;
   stroke-dasharray: 650;
   stroke-dashoffset: 650;
-  animation: fadeInBanner 2.5s ease-in forwards;
   fill: none;
   stroke: white;
   stroke-width: 2px;
   /*            animation-fill-mode: forwards*/
+}
+#banner #svg-name[data-animate=true] {
+  animation: fadeInBanner 2.5s ease-in forwards;
 }
 
 #loading {

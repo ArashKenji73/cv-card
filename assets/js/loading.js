@@ -1,6 +1,12 @@
 function loading() {
     //remove active from loading 
-    document.getElementById('loading').classList.remove('active')
+    
+    let loading = document.getElementById('loading');
+    let svgName = document.getElementById('svg-name');
+    
+    
+    loading.classList.remove('active');
+    svgName.dataset.animate = 'true';
 }
 
 
