@@ -34,13 +34,12 @@ nav-container {
         font-size: 20px;
         margin-right: $margin-right;
     }
+    
+    
+
     .profile-img {
-        $size: 70px;
-        width: $size;
-        height: $size;
-        background: $light-pink;
+        @include profile-img(70px);
         margin-left: $margin-left;
-        @include border-radius($size);
         margin-bottom: $margin-bottom;
         margin-right: $margin-right;
         margin-top: 30px;

@@ -51,8 +51,8 @@ header-content {
         width: $size;
         height: $size;
         background: $light-pink;
-        margin-left: $margin-left;
         @include border-radius($size);
+        margin-left: $margin-left;
     }
 
 

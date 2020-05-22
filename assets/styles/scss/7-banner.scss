@@ -15,12 +15,25 @@
     }
     
     .subtitle{
-        animation-delay: 1.7s;
+        visibility: hidden;
+        opacity: 0;
+        
+        &[data-animate = 'true']{
+            animation: fadeIn 0.3s linear forwards;
+            animation-delay: 1.8s
+        }
     }
     
     
     .cta-wrapper{
-        animation-delay: 2.1s;
+        visibility: hidden;
+        opacity: 0;
+        
+        
+        &[data-animate = 'true']{
+            animation: fadeIn 0.3s linear forwards;
+            animation-delay: 2.1s
+        }
     }
 
 

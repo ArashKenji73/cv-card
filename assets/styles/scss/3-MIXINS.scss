@@ -14,7 +14,17 @@
 }
 
 
-@mixin perfectFlex(){
+@mixin profile-img($img-size) {
+    width: $img-size;
+    height: $img-size;
+    background: $light-pink;
+    @include border-radius($img-size);
+}
+
+
+
+
+@mixin perfectFlex() {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +52,7 @@
 
 
 
-.fadeIn{
+.fadeIn {
     opacity: 0;
     visibility: hidden;
     animation: fadeIn 0.3s ease-in forwards;
