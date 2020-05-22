@@ -1,1 +1,5 @@
-
+@for $i from 1 through 4 {
+  .skill:nth-child(#{$i}) {
+    .progress{transition-delay: 0.1s * $i;}
+  }
+}

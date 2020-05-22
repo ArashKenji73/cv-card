@@ -216,7 +216,7 @@ section {
   height: 100%;
   background: red;
   width: 0%;
-  transition: all 0.5s;
+  transition: all 0.7s;
 }
 
 header {
@@ -494,19 +494,24 @@ nav-container .footer, nav .container .footer {
   font-family: IRANSans-Light;
 }
 #about-me .btn {
-  width: 50%;
+  width: 55%;
   margin-bottom: 0.5rem;
 }
 
-.skill .header .skill-title {
-  font-family: vazir-Bold;
+.skill:nth-child(1) .progress {
+  transition-delay: 0.1s;
 }
-.skill .header .progress-digit {
-  color: #777;
-  font-family: vazir-Light;
+
+.skill:nth-child(2) .progress {
+  transition-delay: 0.2s;
 }
-.skill .progress-bar-wrapper {
-  background: #ebebeb;
+
+.skill:nth-child(3) .progress {
+  transition-delay: 0.3s;
+}
+
+.skill:nth-child(4) .progress {
+  transition-delay: 0.4s;
 }
 
 /*# sourceMappingURL=main.css.map */
