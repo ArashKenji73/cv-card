@@ -24,8 +24,6 @@ body {
 
 @include fontSelector(IRANSans-Light, IRANSans, 'Light');
 
-@include fontSelector(IRANSans-Light, IRANSans, 'Light');
-
 @include fontSelector(IRANSans-Medium, IRANSans, 'Medium');
 
 @include fontSelector(IRANSans-UltraLight, IRANSans, 'UltraLight');
@@ -36,14 +34,14 @@ body {
     font-family: vazir-bold;
     font-size: 24px;
     margin-bottom: 48px;
-    margin-right: 16px;
+    margin-right: 12px;
     
     &::before{
         position: absolute;
         content: "";
         height: 60%;
-        width: 5px;
-        right: -15px;
+        width: 4px;
+        right: -12px;
         background: #ff5959;
         top: 50%;
         transform: translateY(-50%);
@@ -122,6 +120,11 @@ body {
     
     &.btn-secondary{
         border: 2px solid $white;
+    }
+    
+    
+    &.btn-bg-color{
+        background: $main-color;
     }
     
 }

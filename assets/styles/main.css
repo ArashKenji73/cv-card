@@ -75,10 +75,6 @@ body {
   src: url("../fonts/IRANSans-Light.ttf");
 }
 @font-face {
-  font-family: IRANSans-Light;
-  src: url("../fonts/IRANSans-Light.ttf");
-}
-@font-face {
   font-family: IRANSans-Medium;
   src: url("../fonts/IRANSans-Medium.ttf");
 }
@@ -91,14 +87,14 @@ body {
   font-family: vazir-bold;
   font-size: 24px;
   margin-bottom: 48px;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 .title-line::before {
   position: absolute;
   content: "";
   height: 60%;
-  width: 5px;
-  right: -15px;
+  width: 4px;
+  right: -12px;
   background: #ff5959;
   top: 50%;
   transform: translateY(-50%);
@@ -166,6 +162,9 @@ body {
 }
 .btn.btn-secondary {
   border: 2px solid #fff;
+}
+.btn.btn-bg-color {
+  background: #4a63e7;
 }
 
 section {
@@ -434,11 +433,33 @@ nav-container .footer, nav .container .footer {
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
   margin-bottom: 12px;
+  margin-right: 8px;
 }
 #about-me .hello {
   font-family: vazir-bold;
   font-size: 24px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+}
+#about-me .text {
+  margin-bottom: 26px;
+}
+#about-me .personal-info {
+  margin-bottom: 26px;
+}
+#about-me .personal-info li {
+  margin-bottom: 0.5rem;
+}
+#about-me .personal-info .list-title {
+  font-size: 14px;
+  font-family: IRANSans-Medium;
+}
+#about-me .personal-info .content {
+  font-size: 14px;
+  font-family: IRANSans-Light;
+}
+#about-me .btn {
+  width: 50%;
+  margin-bottom: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

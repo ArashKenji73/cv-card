@@ -8,13 +8,42 @@
     .profile-img{
         @include profile-img(150px);
         margin-bottom: 12px;
+        margin-right: 8px;
     }
     
     
     .hello{
         font-family: vazir-bold;
         font-size: 24px;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
     }
     
+    .text{
+        margin-bottom: 26px;
+    }
+    
+    .personal-info{
+        
+        margin-bottom: 26px;
+        li{
+            margin-bottom: 0.5rem;
+        }
+        .list-title{
+            font-size: 14px;
+            font-family: IRANSans-Medium;
+        }
+        
+        
+        .content{
+            font-size: 14px;
+            font-family: IRANSans-Light;
+        }
+        
+        
+    }
+    
+    .btn{
+        width: 50%;
+        margin-bottom: 0.5rem;
+    }
 }
