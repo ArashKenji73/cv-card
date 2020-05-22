@@ -168,11 +168,12 @@ body {
 }
 
 section {
-  padding: 0px 20px;
+  padding: 65px 40px 60px;
   margin: 15px 0px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
+  background: #fff;
 }
 
 .site-wrapper {
@@ -181,6 +182,41 @@ section {
 }
 .site-wrapper[data-open=true] {
   transform: translateX(-290px);
+}
+
+.skill {
+  height: 36px;
+  text-align: left;
+  position: relative;
+  height: auto;
+  margin-bottom: 2.5rem;
+}
+.skill .header {
+  direction: ltr;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.skill .header .skill-title {
+  font-family: vazir-Bold;
+}
+.skill .header .progress-digit {
+  color: #777;
+  font-family: vazir-Light;
+}
+.skill .progress-bar-wrapper {
+  position: relative;
+  background: #ebebeb;
+  height: 3px;
+}
+.skill .progress-bar-wrapper .progress {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  background: red;
+  width: 0%;
+  transition: all 0.5s;
 }
 
 header {
@@ -460,6 +496,17 @@ nav-container .footer, nav .container .footer {
 #about-me .btn {
   width: 50%;
   margin-bottom: 0.5rem;
+}
+
+.skill .header .skill-title {
+  font-family: vazir-Bold;
+}
+.skill .header .progress-digit {
+  color: #777;
+  font-family: vazir-Light;
+}
+.skill .progress-bar-wrapper {
+  background: #ebebeb;
 }
 
 /*# sourceMappingURL=main.css.map */

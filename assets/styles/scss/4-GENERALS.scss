@@ -130,11 +130,11 @@ body {
 }
 
 
-
 section {
-    padding: 0px 20px;
+    padding: 65px 40px 60px;
     margin: 15px 0px;
     @include border-radius($border-radius);
+    background: $white;
 }
 
 .site-wrapper {
@@ -143,5 +143,45 @@ section {
 
     &[data-open="true"] {
         transform: translateX(-($navbar-width + 25px));
+    }
+}
+
+
+.skill{
+    height: 36px;
+    text-align: left;
+    position: relative;
+    height: auto;
+    margin-bottom: 2.5rem;
+    
+    .header{
+        direction: ltr;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        
+        
+        .skill-title{
+            font-family: vazir-Bold;
+        }
+        .progress-digit{
+            color: #777;
+            font-family: vazir-Light;
+        }
+    }
+    
+    .progress-bar-wrapper{
+        position: relative;
+        background: #ebebeb;
+        height: 3px;
+        .progress{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 100%;
+            background: red;
+            width: 0%;
+            transition: all 0.5s;
+        }
     }
 }
