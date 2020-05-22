@@ -47,11 +47,7 @@ header-content {
     }
 
     .profile-img {
-        $size: 40px;
-        width: $size;
-        height: $size;
-        background: $light-pink;
-        @include border-radius($size);
+        @include profile-img(40px);
         margin-left: $margin-left;
     }
 

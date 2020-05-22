@@ -35,6 +35,8 @@ body {
     position: relative;
     font-family: vazir-bold;
     font-size: 24px;
+    margin-bottom: 48px;
+    margin-right: 16px;
     
     &::before{
         position: absolute;
@@ -75,6 +77,14 @@ body {
     line-height: 1.9em;
     margin-bottom: 24px;
 
+}
+
+
+
+.text{
+    font-family: IRANSans-UltraLight;
+    line-height: 1.5em;
+    font-size: 14px;
 }
 
 

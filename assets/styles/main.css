@@ -90,6 +90,8 @@ body {
   position: relative;
   font-family: vazir-bold;
   font-size: 24px;
+  margin-bottom: 48px;
+  margin-right: 16px;
 }
 .title-line::before {
   position: absolute;
@@ -125,6 +127,12 @@ body {
   font-family: IRANSans-UltraLight;
   line-height: 1.9em;
   margin-bottom: 24px;
+}
+
+.text {
+  font-family: IRANSans-UltraLight;
+  line-height: 1.5em;
+  font-size: 14px;
 }
 
 .cta-wrapper {
@@ -417,6 +425,20 @@ nav-container .footer, nav .container .footer {
   padding: 65px 40px 60px;
   display: flex;
   flex-direction: column;
+}
+#about-me .profile-img {
+  width: 150px;
+  height: 150px;
+  background: #ff5959;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  margin-bottom: 12px;
+}
+#about-me .hello {
+  font-family: vazir-bold;
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */
