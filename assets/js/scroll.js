@@ -1,25 +1,49 @@
 //get all sections height 
-let headerHeight,bannerHeight,aboutMeHeight,toSkillsPixel;
-
-
-headerHeight = document.getElementsByTagName("HEADER")[0].offsetHeight;
-
-bannerHeight = document.getElementById("banner").offsetHeight;
-
-aboutMeHeight = document.getElementById("about-me").offsetHeight;
-
-toSkillsPixel = (headerHeight + bannerHeight + aboutMeHeight) - 520;
+let
+    skillOffset,
+    skillHeight,
+    aboutOffset,
+    aboutHeight;
 
 
 
+//get skills scroll position
+skillOffset = document.getElementById('skills').offsetTop;
 
-function scrollFunction( customCallback ) {
-    if (document.documentElement.scrollTop > toSkillsPixel ) {
-        {
-            customCallback();
-        }
+//get skills height
+skillHeight = document.getElementById('skills').offsetHeight;
+
+
+
+
+
+//get about-me scroll position
+aboutOffset = document.getElementById('about-me').offsetTop;
+
+
+//get about-me height
+aboutHeight = document.getElementById('about-me').offsetHeight;
+
+
+
+
+
+
+
+
+//call callback after scroll to point
+function scrollFunction(customCallback, offset, height) {
+    if (document.documentElement.scrollTop > offset - height) {
+        customCallback();
     }
 }
 
 
-export {toSkillsPixel, scrollFunction}
+export {
+    skillOffset,
+    skillHeight,
+    aboutOffset,
+    aboutHeight,
+    scrollFunction
+}
+
