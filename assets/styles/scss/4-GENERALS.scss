@@ -29,14 +29,14 @@ body {
 @include fontSelector(IRANSans-UltraLight, IRANSans, 'UltraLight');
 
 
-.title-line{
+.title-line {
     position: relative;
     font-family: vazir-bold;
     font-size: 24px;
     margin-bottom: 48px;
     margin-right: 12px;
-    
-    &::before{
+
+    &::before {
         position: absolute;
         content: "";
         height: 60%;
@@ -79,7 +79,7 @@ body {
 
 
 
-.text{
+.text {
     font-family: IRANSans-UltraLight;
     line-height: 1.5em;
     font-size: 14px;
@@ -108,25 +108,25 @@ body {
     color: $white;
     font-size: 12px;
     font-family: vazir-bold;
-    
-    &.btn-rounded{
+
+    &.btn-rounded {
         @include border-radius(100px);
     }
-    
-    &.btn-primary{
+
+    &.btn-primary {
         border: 2px solid transparent;
         background: $light-pink;
     }
-    
-    &.btn-secondary{
+
+    &.btn-secondary {
         border: 2px solid $white;
     }
-    
-    
-    &.btn-bg-color{
+
+
+    &.btn-bg-color {
         background: $main-color;
     }
-    
+
 }
 
 
@@ -140,41 +140,43 @@ section {
 .site-wrapper {
     transform: translateX(0px);
     transition: transform 0.3s ease-in-out;
-    
+
     &[data-open="true"] {
         transform: translateX(-($navbar-width + 25px));
     }
 }
 
 
-.skill{
+.skill {
     height: 36px;
     text-align: left;
     position: relative;
     height: auto;
     margin-bottom: 2.5rem;
-    
-    .header{
+
+    .header {
         direction: ltr;
         display: flex;
         justify-content: space-between;
         margin-bottom: 12px;
-        
-        
-        .skill-title{
+
+
+        .skill-title {
             font-family: vazir-Bold;
         }
-        .progress-digit{
+
+        .progress-digit {
             color: #777;
             font-family: vazir-Light;
         }
     }
-    
-    .progress-bar-wrapper{
+
+    .progress-bar-wrapper {
         position: relative;
         background: #ebebeb;
         height: 3px;
-        .progress{
+
+        .progress {
             position: absolute;
             left: 0px;
             top: 0px;
@@ -185,3 +187,5 @@ section {
         }
     }
 }
+
+
