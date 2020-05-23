@@ -11,6 +11,9 @@ function loading() {
     
     
     loading.classList.remove('active');
+    
+    
+    
     svgName.dataset.animate = 'true';
     bannerSubtitle.dataset.animate = 'true';
     bannerCta.dataset.animate = 'true';

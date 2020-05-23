@@ -4,13 +4,23 @@
     display: flex;
     flex-direction: column;
     
+    //visibility: hidden;
+    //opacity: 0;
+    transition:  all 1s;
+    
+    &[data-animate="true"]{
+        //visibility: visible;
+        //opacity: 1;
+    }
+    
+    
+    
     
     .profile-img{
         @include profile-img(150px);
         margin-bottom: 12px;
         margin-right: 8px;
     }
-    
     
     .hello{
         font-family: vazir-bold;

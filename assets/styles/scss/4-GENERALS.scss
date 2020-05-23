@@ -167,6 +167,8 @@ section {
         .progress-digit{
             color: #777;
             font-family: vazir-Light;
+            
+            
         }
     }
     
@@ -179,7 +181,7 @@ section {
             left: 0px;
             top: 0px;
             height: 100%;
-            background: red;
+            background: $light-pink;
             width: 0%;
             transition: all 0.9s cubic-bezier(0.905, -0.600, 0.400, 1.650);
         }

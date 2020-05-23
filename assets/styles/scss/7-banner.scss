@@ -7,30 +7,31 @@
 
     .title {
         font-size: 36px;
+
         &::after {
             bottom: 30px;
             content: "";
             margin-right: 6px;
         }
     }
-    
-    .subtitle{
+
+    .subtitle {
         visibility: hidden;
         opacity: 0;
-        
-        &[data-animate = 'true']{
+
+        &[data-animate='true'] {
             animation: fadeIn 0.3s linear forwards;
             animation-delay: 1.8s
         }
     }
-    
-    
-    .cta-wrapper{
+
+
+    .cta-wrapper {
         visibility: hidden;
         opacity: 0;
-        
-        
-        &[data-animate = 'true']{
+
+
+        &[data-animate='true'] {
             animation: fadeIn 0.3s linear forwards;
             animation-delay: 2.1s
         }
@@ -38,7 +39,7 @@
 
 
     #svg-name {
-        
+
         width: 236px;
         stroke-dasharray: 650;
         stroke-dashoffset: 650;
@@ -47,12 +48,12 @@
         stroke: white;
         stroke-width: 2px;
         /*            animation-fill-mode: forwards*/
-        
-        
-        &[data-animate = 'true']{
+
+
+        &[data-animate='true'] {
             animation: fadeInBanner 2.5s ease-in forwards;
         }
     }
 
-    
+
 }

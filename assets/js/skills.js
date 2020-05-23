@@ -2,6 +2,9 @@ var skills = document.querySelectorAll('.skill');
 
 
 function addPercentToSkill() {
+    
+    //console.log('you reached');
+
     skills.forEach(
         element => {
             //get progress digit from data attr

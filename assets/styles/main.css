@@ -214,7 +214,7 @@ section {
   left: 0px;
   top: 0px;
   height: 100%;
-  background: red;
+  background: #ff5959;
   width: 0%;
   transition: all 0.9s cubic-bezier(0.905, -0.6, 0.4, 1.65);
 }
@@ -460,6 +460,7 @@ nav-container .footer, nav .container .footer {
   padding: 65px 40px 60px;
   display: flex;
   flex-direction: column;
+  transition: all 1s;
 }
 #about-me .profile-img {
   width: 150px;
@@ -499,19 +500,19 @@ nav-container .footer, nav .container .footer {
 }
 
 .skill:nth-child(1) .progress {
-  transition-delay: 0.1s;
+  transition-delay: 0.05s;
 }
 
 .skill:nth-child(2) .progress {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 
 .skill:nth-child(3) .progress {
-  transition-delay: 0.3s;
+  transition-delay: 0.15s;
 }
 
 .skill:nth-child(4) .progress {
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 /*# sourceMappingURL=main.css.map */
