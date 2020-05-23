@@ -28,9 +28,9 @@ aboutHeight = document.getElementById('about-me').offsetHeight;
 
 
 //call callback after scroll to point
-function scrollFunction(customCallback, offset, height) {
-    if (document.documentElement.scrollTop > (offset - height)-60) {
-        customCallback();
+function scrollFunction(customCallback, element='', offset, height) {
+    if (document.documentElement.scrollTop > (offset - height) - 60) {
+        customCallback(element);
     }
 }
 
@@ -42,4 +42,3 @@ export {
     aboutHeight,
     scrollFunction
 }
-

@@ -1,58 +1,60 @@
-#about-me{
+#about-me {
     background: $white;
     padding: 65px 40px 60px;
     display: flex;
     flex-direction: column;
     
-    //visibility: hidden;
-    //opacity: 0;
-    transition:  all 1s;
+    visibility: hidden;
+    opacity: 0;
     
-    &[data-animate="true"]{
-        //visibility: visible;
-        //opacity: 1;
+
+    &[data-animate="true"] {
+        animation: fadeIn 0.5s linear forwards;
+        animation-delay: 0.2s;
     }
-    
-    
-    
-    
-    .profile-img{
+
+
+
+
+    .profile-img {
         @include profile-img(150px);
         margin-bottom: 12px;
         margin-right: 8px;
     }
-    
-    .hello{
+
+    .hello {
         font-family: vazir-bold;
         font-size: 24px;
         margin-bottom: 12px;
     }
-    
-    .text{
+
+    .text {
         margin-bottom: 26px;
     }
-    
-    .personal-info{
-        
+
+    .personal-info {
+
         margin-bottom: 26px;
-        li{
+
+        li {
             margin-bottom: 0.5rem;
         }
-        .list-title{
+
+        .list-title {
             font-size: 14px;
             font-family: IRANSans-Medium;
         }
-        
-        
-        .content{
+
+
+        .content {
             font-size: 14px;
             font-family: IRANSans-Light;
         }
-        
-        
+
+
     }
-    
-    .btn{
+
+    .btn {
         width: 55%;
         margin-bottom: 0.5rem;
     }
