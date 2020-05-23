@@ -2,11 +2,9 @@ import {
     toggleMenu
 } from './toggle-menu.js';
 
-
 import {
     addPercentToSkill
 } from './skills.js';
-
 
 import {
     skillOffset,
@@ -17,16 +15,14 @@ import {
 } from './scroll.js';
 
 
-//console.log(skillOffset, skillOffset);
-
+console.log(skillOffset, skillOffset);
 
 //if scrolled to skills this function called
 window.onscroll = function () {
-    scrollFunction(addPercentToSkill(skillOffset - skillHeight));
+    scrollFunction(addPercentToSkill( skillOffset - skillHeight));
 };
 
 
 
 
-
-
+//if scrolled to skills this function called

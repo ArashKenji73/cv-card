@@ -39,15 +39,11 @@ function scrollFunction(customCallback, offset, height) {
 }
 
 
-
-
-
-
 export {
     skillOffset,
     skillHeight,
     aboutOffset,
     aboutHeight,
-    scrollFunction,
+    scrollFunction
 }
 
