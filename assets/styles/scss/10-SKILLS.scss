@@ -1,3 +1,45 @@
+
+.skill {
+    height: 36px;
+    text-align: left;
+    position: relative;
+    height: auto;
+    margin-bottom: 2.5rem;
+
+    .header {
+        direction: ltr;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+
+
+        .skill-title {
+            font-family: vazir-Bold;
+        }
+
+        .progress-digit {
+            color: #777;
+            font-family: vazir-Light;
+        }
+    }
+
+    .progress-bar-wrapper {
+        position: relative;
+        background: #ebebeb;
+        height: 3px;
+
+        .progress {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 100%;
+            background: $light-pink;
+            width: 0%;
+            transition: all 1.1s cubic-bezier(0.905, -0.600, 0.400, 1.650);
+        }
+    }
+}
+
 @for $i from 1 through 4 {
   .skill:nth-child(#{$i}) {
     .progress{transition-delay: 0.03s * $i;}

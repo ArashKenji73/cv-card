@@ -1,10 +1,13 @@
-var skills = document.querySelectorAll('.skill');
+
+let skills, skillOffset, skillHeight;
+
+skills = document.querySelectorAll('.skill');
+skillOffset = document.getElementById('skills').offsetTop;
+skillHeight = document.getElementById('skills').offsetHeight;
 
 
 function addPercentToSkill() {
-    
     //console.log('you reached');
-
     skills.forEach(
         element => {
             //get progress digit from data attr
@@ -27,5 +30,7 @@ function addPercentToSkill() {
 
 
 export {
-    addPercentToSkill
+    addPercentToSkill,
+    skillOffset,
+    skillHeight
 }

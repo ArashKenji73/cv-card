@@ -1,7 +1,7 @@
 function loading() {
     //remove active from loading 
     
-    let loading = document.getElementById('loading');
+    //let loading = document.getElementById('loading');
     let svgName = document.getElementById('svg-name');
     
     
@@ -10,13 +10,15 @@ function loading() {
     let bannerCta = document.querySelector('#banner .cta-wrapper');
     
     
-    loading.classList.remove('active');
-    
-    
+    //loading.classList.remove('active');
     
     svgName.dataset.animate = 'true';
     bannerSubtitle.dataset.animate = 'true';
     bannerCta.dataset.animate = 'true';
+    
+    
+    //document.getElementById('about-me').dataset.animate = 'true';
+    
 }
 
 

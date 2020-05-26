@@ -4,10 +4,15 @@ import {
 
 
 import {
+    lightDark
+} from './night-light.js';
+
+import {
     scrollInit
 } from './scroll.js';
 
 
+lightDark();
 scrollInit();
 
 

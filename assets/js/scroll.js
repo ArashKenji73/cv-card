@@ -1,71 +1,70 @@
 //get all sections height 
 let
-    skillOffset,
-    skillHeight,
     aboutOffset,
     aboutHeight;
 
 
 
 //get skills scroll position
-skillOffset = document.getElementById('skills').offsetTop;
-
 //import from skills
-
-
-
 import {
-    addPercentToSkill
+    addPercentToSkill,
+    skillOffset,
+    skillHeight
 } from './skills.js';
 
 
 
+//get service scroll position
+//import from service
+import {
+    addAnimateService,
+    services,
+    servicesOffset,
+    servicesHeight
+} from './services.js';
 
 
 
-
-
-
-
-
-//get skills height
-skillHeight = document.getElementById('skills').offsetHeight;
 
 
 
 //get about-me scroll position
 aboutOffset = document.getElementById('about-me').offsetTop;
-
-
 //get about-me height
 aboutHeight = document.getElementById('about-me').offsetHeight;
 
+var aboutSec = document.getElementById('about-me');
 
 
 
 //call callback after scroll to point
-function scrollFunction(customCallback, element = '', offset, height) {
-    if (document.documentElement.scrollTop > (offset - height) - 60) {
+function scrollFunction(customCallback, element = '', offset) {
+    if (window.scrollY + window.innerHeight > (offset + 100)) {
         customCallback(element);
     }
 }
 
 
-
-var aboutSec = document.getElementById('about-me');
-
-
 function fadeIn(el) {
-    el.dataset.animate='true';
+    el.dataset.animate = 'true';
 }
 
 //if scrolled to skills this function called
 function scrollInit() {
     window.onscroll = function () {
-        //fadeIn element
-        scrollFunction(fadeIn, aboutSec, aboutOffset, aboutHeight);
-
-        scrollFunction(addPercentToSkill, '', skillOffset, skillHeight);
+        //fadeIn About us
+        scrollFunction(fadeIn, aboutSec, aboutOffset);
+        
+        
+        //add animate to skills
+        scrollFunction(addPercentToSkill, '', skillOffset);
+        
+        
+        //add animate to services
+        services.forEach((service) => {
+            scrollFunction(addAnimateService, service, servicesOffset, servicesHeight - 820);
+        });
     };
 }
 

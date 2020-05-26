@@ -1,0 +1,53 @@
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 218px;
+        padding: 30px;
+        border: 3px solid #E5E5E5;
+        margin-bottom: 2rem;
+        @include border-radius(10px);
+        transform: translateY(100px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.8s;
+
+
+        &[data-animate='true'] {
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .service-icon {
+            width: 42px;
+            fill: $light-pink;
+
+        }
+
+        .service-title {
+            font-size: 18px;
+            font-family: vazir-Bold;
+        }
+
+        .service-desc {
+            text-align: center;
+            font-size: 12px;
+            font-family: IRANSans-Medium;
+        }
+    }
+}
+
+
+@for $i from 1 through 4 {
+  .service:nth-child(#{$i}) {
+    transition-delay: 0.08s * $i;
+  }
+}

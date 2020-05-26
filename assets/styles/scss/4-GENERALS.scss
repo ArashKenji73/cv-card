@@ -1,42 +1,132 @@
-html,
-body {
-    overflow-x: hidden;
-    background: #eee;
-    min-height: 100vh;
-    width: 100vw;
-}
-
-body {
-    padding: $body-padding;
-    font-family: sans-serif;
-}
-
-
+////////GENERALS
 @include fontSelector(vazir-bold, Vazir, 'Bold');
-
-@include fontSelector(vazir-thin, Vazir, 'Thin');
 
 @include fontSelector(vazir-light, Vazir, 'Light');
 
-
-
-
-
-@include fontSelector(IRANSans-Light, IRANSans, 'Light');
 
 @include fontSelector(IRANSans-Medium, IRANSans, 'Medium');
 
 @include fontSelector(IRANSans-UltraLight, IRANSans, 'UltraLight');
 
 
-.title-line{
+
+
+body {
+    //padding: $body-padding;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+
+
+html[data-theme="night"] {
+    .site-wrapper {
+        background: $body-dark-bg;
+    }
+
+    section {
+        background: $section-dark-bg;
+    }
+
+    header {
+        background-color: $section-dark-bg !important;
+        border-color: #3c3c3c;
+    }
+
+    #banner {
+        background: $section-dark-bg;
+    }
+
+    .list-title,
+    .title-line,
+    .hello,
+    .skill-title,
+    .text {
+        color: $white !important;
+    }
+
+    .list-content {
+        color: #e4e4e4 !important;
+    }
+
+
+    #nav-overlay {
+        background: #000;
+    }
+
+    nav {
+        background: $section-dark-bg;
+    }
+
+    .skill {
+        .skill-title {
+            color: $white !important;
+        }
+
+        .header .progress-digit {
+            color: #f0f0f0 !important;
+        }
+
+        .progress-bar-wrapper {
+            background: #545454;
+        }
+    }
+
+    .service {
+        border-color: #3c3c3c;
+
+        .service-title {
+            color: $white;
+        }
+
+        .service-desc {
+            color: #f0f0f0;
+        }
+    }
+
+
+
+
+}
+
+
+
+
+
+////////////////MAIN SKELETON
+.site-wrapper {
+    display: flex;
+    width: fit-content;
+    position: relative;
+    background: $body-bg;
+    min-height: 100vh;
+    //height: 500vh;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+
+    &[data-open="true"] {
+        transform: translateX(0px);
+    }
+
+    z-index: 1;
+}
+
+#content {
+    width: calc(100vw - 30px);
+    margin: 0px 15px;
+    //background: red;
+}
+
+////////////////MAIN SKELETON ENDED
+.title-line {
     position: relative;
     font-family: vazir-bold;
     font-size: 24px;
     margin-bottom: 48px;
     margin-right: 12px;
-    
-    &::before{
+
+    &::before {
         position: absolute;
         content: "";
         height: 60%;
@@ -48,14 +138,13 @@ body {
     }
 }
 
-
 .title {
     position: relative;
     color: $white;
     font-family: vazir-bold;
+    font-size: 18px;
 
     &::after {
-
         position: absolute;
         bottom: 6px;
         content: "";
@@ -74,12 +163,11 @@ body {
     font-family: IRANSans-UltraLight;
     line-height: 1.9em;
     margin-bottom: 24px;
-
 }
 
 
 
-.text{
+.text {
     font-family: IRANSans-UltraLight;
     line-height: 1.5em;
     font-size: 14px;
@@ -104,29 +192,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 24px;
-    color: $white;
-    font-size: 12px;
-    font-family: vazir-bold;
-    
-    &.btn-rounded{
+    padding: 6px 18px;
+    color: #fff;
+    font-size: 14px;
+    font-family: IRANSans-Medium;
+
+    &.btn-rounded {
         @include border-radius(100px);
     }
-    
-    &.btn-primary{
+
+    &.btn-primary {
         border: 2px solid transparent;
         background: $light-pink;
     }
-    
-    &.btn-secondary{
+
+    &.btn-secondary {
         border: 2px solid $white;
     }
-    
-    
-    &.btn-bg-color{
+
+
+    &.btn-bg-color {
         background: $main-color;
     }
-    
+
 }
 
 
@@ -134,56 +222,10 @@ section {
     padding: 65px 40px 60px;
     margin: 15px 0px;
     @include border-radius($border-radius);
-    background: $white;
-}
-
-.site-wrapper {
-    transform: translateX(0px);
-    transition: transform 0.3s ease-in-out;
-    
-    &[data-open="true"] {
-        transform: translateX(-($navbar-width + 25px));
-    }
+    background: $section-bg;
 }
 
 
-.skill{
-    height: 36px;
-    text-align: left;
-    position: relative;
-    height: auto;
-    margin-bottom: 2.5rem;
-    
-    .header{
-        direction: ltr;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 12px;
-        
-        
-        .skill-title{
-            font-family: vazir-Bold;
-        }
-        .progress-digit{
-            color: #777;
-            font-family: vazir-Light;
-            
-            
-        }
-    }
-    
-    .progress-bar-wrapper{
-        position: relative;
-        background: #ebebeb;
-        height: 3px;
-        .progress{
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            height: 100%;
-            background: $light-pink;
-            width: 0%;
-            transition: all 1.1s cubic-bezier(0.905, -0.600, 0.400, 1.650);
-        }
-    }
-}
+
+
+

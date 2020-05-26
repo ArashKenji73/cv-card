@@ -1,32 +1,52 @@
 let MenuBtn = document.getElementById('menu-btn');
 
-let siteWrapper = document.getElementsByClassName('site-wrapper')[0];
+let NavbarOverlay = document.getElementById('nav-overlay');
+
+let Navbar = document.getElementsByTagName('NAV')[0];
 
 
-MenuBtn.addEventListener("click",function(){
-   
+
+
+MenuBtn.addEventListener("click", function () {
     toggleMenu();
-    
 });
 
 
+NavbarOverlay.addEventListener("click", function(){
+    toggleOut();
+});
 
-function toggleMenu(){
-    
-    
-    if(siteWrapper.dataset.open == 'true'){
-        //must close
-        siteWrapper.dataset.open = 'false';
+
+function toggleIn() {
+    Navbar.dataset.open = 'true';
+    MenuBtn.dataset.open = 'true';
+    NavbarOverlay.dataset.open = 'true';
+}
+
+function toggleOut(){
+        Navbar.dataset.open = 'false';
         MenuBtn.dataset.open = 'false';
-    }else{
-        //must open
-        siteWrapper.dataset.open = 'true';
-        MenuBtn.dataset.open = 'true';
-        
-    }
-    
-    
+        NavbarOverlay.dataset.open = 'false';
 }
 
 
-export { toggleMenu };
+function toggleMenu() {
+
+
+    if (Navbar.dataset.open == 'true') {
+        //must close
+        toggleOut()
+
+    } else {
+        //must open
+        toggleIn()
+
+    }
+
+
+}
+
+
+export {
+    toggleMenu
+};
