@@ -12,13 +12,13 @@ var aboutSec = document.getElementById('about-me');
 
 
 //get contact scroll position
-let contactInfo, contactInfoOffset; 
+let contactInfo, contactInfoOffset;
 contactInfo = document.querySelector('#contact-us .contact-info');
 contactInfoOffset = contactInfo.offsetTop;
 
 
 
-let contactForm, contactFormOffset; 
+let contactForm, contactFormOffset;
 contactForm = document.querySelector('#contact-us .contact-from');
 contactFormOffset = contactInfo.offsetTop;
 
@@ -48,16 +48,36 @@ import {
 
 
 
+//get all section height
+let sections = document.getElementsByTagName('SECTION');
+
+function test(section) {
+    let ActiveSectionID;
+    //remove all active
+    document.querySelectorAll(`.main-menu li`).forEach(elm => {
+        elm.classList.remove('active');
+    });
+    if (window.scrollY == 0) {
+        ActiveSectionID = "banner";
+    } else {
+        //get active section
+        ActiveSectionID = section.id;
+    }
 
 
+    //console.log('you reached : ' + ActiveSectionID);
 
+    document.querySelectorAll(`.main-menu li[data-section="${ActiveSectionID}"]`)[0].classList.add('active');
+
+
+}
 
 
 
 
 //call callback after scroll to point
 function scrollFunction(customCallback, element, offset) {
-    if (window.scrollY + window.innerHeight > (offset +30)) {
+    if (window.scrollY + window.innerHeight > (offset + 30)) {
         customCallback(element);
     } else {
         removeAnimate(element);
@@ -67,16 +87,9 @@ function scrollFunction(customCallback, element, offset) {
 
 
 function removeAnimate(RemovedEl) {
-    
-//    if (RemovedEl.length) {
-//        RemovedEl.forEach(item => {
-//            item.dataset.animate = 'false';
-//        });
-//    }else{
-//        RemovedEl.dataset.animate = 'false';
-//    }
-    
-    
+
+
+
     RemovedEl.dataset.animate = 'false';
 
 }
@@ -89,17 +102,12 @@ function fadeIn(el) {
 //if scrolled to skills this function called
 function scrollInit() {
     window.onscroll = function () {
-        
-        //console.log(contactInfo);
-        
-        
+
         //fadeIn About us
         scrollFunction(fadeIn, aboutSec, aboutOffset);
 
 
         //add animate to skills
-        //scrollFunction(addPercentToSkill, skills, skillOffset);
-        
         skills.forEach((skill) => {
             scrollFunction(addPercentToSkill, skill, skill.offsetTop);
         });
@@ -109,12 +117,21 @@ function scrollInit() {
         services.forEach((service) => {
             scrollFunction(addAnimateService, service, service.offsetTop);
         });
-        
-        
-        
+
+
+
         //add animate to contact-info
         scrollFunction(fadeIn, contactInfo, contactInfoOffset);
         scrollFunction(fadeIn, contactForm, contactFormOffset);
+
+
+
+        ////////
+        for (let i = 0; i < sections.length; i++) {
+            scrollFunction(test, sections[i], sections[i].offsetTop);
+        }
+
+
     };
 }
 

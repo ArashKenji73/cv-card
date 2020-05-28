@@ -73,6 +73,11 @@ body {
   }
 }
 
+@media (min-width: 992px) {
+  html[data-theme=night] body {
+    background: #121212;
+  }
+}
 html[data-theme=night] .site-wrapper {
   background: #121212;
 }
@@ -453,7 +458,7 @@ nav-container .main-menu li, nav .container .main-menu li {
 nav-container .main-menu li.active::before, nav .container .main-menu li.active::before {
   content: "";
   position: absolute;
-  top: -26px;
+  top: 8px;
   right: -30px;
   height: 18px;
   width: 3px;
@@ -698,7 +703,7 @@ nav-container .footer, nav .container .footer {
   top: 0px;
   height: 100%;
   background: #ff5959;
-  transition: all 0.4s cubic-bezier(0.905, -0.6, 0.4, 1.65);
+  transition: all 0.6s cubic-bezier(0.905, -0.6, 0.4, 1.65);
 }
 
 .skill:nth-child(1) .progress {

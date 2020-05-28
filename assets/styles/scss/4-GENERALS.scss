@@ -25,6 +25,12 @@ body {
 
 
 html[data-theme="night"] {
+    body {
+        @media (min-width: 992px) {
+            background: $body-dark-bg;
+        }
+    }
+    
     .site-wrapper {
         background: $body-dark-bg;
     }
