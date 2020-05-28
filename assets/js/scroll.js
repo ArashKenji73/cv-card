@@ -56,7 +56,7 @@ import {
 
 
 //call callback after scroll to point
-function scrollFunction(customCallback, element = '', offset) {
+function scrollFunction(customCallback, element, offset) {
     if (window.scrollY + window.innerHeight > (offset +30)) {
         customCallback(element);
     } else {
@@ -68,13 +68,16 @@ function scrollFunction(customCallback, element = '', offset) {
 
 function removeAnimate(RemovedEl) {
     
-    if (RemovedEl.length) {
-        RemovedEl.forEach(item => {
-            item.dataset.animate = 'false';
-        });
-    }else{
-        RemovedEl.dataset.animate = 'false';
-    }
+//    if (RemovedEl.length) {
+//        RemovedEl.forEach(item => {
+//            item.dataset.animate = 'false';
+//        });
+//    }else{
+//        RemovedEl.dataset.animate = 'false';
+//    }
+    
+    
+    RemovedEl.dataset.animate = 'false';
 
 }
 
@@ -95,7 +98,11 @@ function scrollInit() {
 
 
         //add animate to skills
-        scrollFunction(addPercentToSkill, skills, skillOffset);
+        //scrollFunction(addPercentToSkill, skills, skillOffset);
+        
+        skills.forEach((skill) => {
+            scrollFunction(addPercentToSkill, skill, skill.offsetTop);
+        });
 
 
         //add animate to services
