@@ -1,60 +1,76 @@
 #contact-us {
 
-    .contact-info {
+
+
+    .info-form-wrapper {
         display: flex;
         flex-direction: column;
-        margin-top: 80px;
-
-        transform: translateY(100px);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.5s;
-        transition-delay: 0.5s;
-
-
-        &[data-animate='true'] {
-            transform: translateY(0px);
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .each-info {
-            @extend each-info;
-        }
-    }
-
-    .contact-from {
-        display: flex;
-        flex-direction: column;
-        margin-top: 90px;
         
-        
-        transform: translateY(100px);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.5s;
-        transition-delay: 1s;
-
-
-        &[data-animate='true'] {
-            transform: translateY(0px);
-            opacity: 1;
-            visibility: visible;
+        @media (min-width: 992px) {
+            flex-direction: row;
+            justify-content: space-between;
         }
 
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
 
-        .input {
-            border: 2px solid #e3e3e3;
-            padding: 10px 24px;
-            @include border-radius(20px);
-            margin-bottom: 1rem;
+            transform: translateY(100px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+            transition-delay: 0.5s;
 
-            &::placeholder {
-                font-family: IRANSans-UltraLight;
-                color: #999;
+
+            &[data-animate='true'] {
+                transform: translateY(0px);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .each-info {
+                @extend each-info;
+            }
+        }
+
+        .contact-from {
+            display: flex;
+            flex-direction: column;
+            margin-top: 90px;
+
+
+            transform: translateY(100px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+            transition-delay: 1s;
+            
+            @media (min-width: 992px) {
+                width: 65%;
+            }
+
+            &[data-animate='true'] {
+                transform: translateY(0px);
+                opacity: 1;
+                visibility: visible;
+            }
+
+
+            .input {
+                border: 2px solid #e3e3e3;
+                padding: 10px 24px;
+                @include border-radius(20px);
+                margin-bottom: 1rem;
+
+                &::placeholder {
+                    font-family: IRANSans-UltraLight;
+                    color: #999;
+                }
             }
         }
     }
+
 }
 
 

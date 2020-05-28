@@ -123,7 +123,7 @@ html[data-theme=night] .service .service-desc {
 html[data-theme=night] #contact-us .contact-info .each-info .info li:last-child {
   color: #b9b9b9;
 }
-html[data-theme=night] each-info .info li:first-child, #contact-us .contact-info html[data-theme=night] .each-info .info li:first-child,
+html[data-theme=night] each-info .info li:first-child, #contact-us .info-form-wrapper .contact-info html[data-theme=night] .each-info .info li:first-child,
 html[data-theme=night] #contact-us .contact-info .each-info .info li:first-child {
   color: #e8e8e8;
 }
@@ -786,7 +786,17 @@ nav-container .footer, nav .container .footer {
   transition-delay: 0.4s;
 }
 
-#contact-us .contact-info {
+#contact-us .info-form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  #contact-us .info-form-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+#contact-us .info-form-wrapper .contact-info {
   display: flex;
   flex-direction: column;
   margin-top: 80px;
@@ -796,12 +806,12 @@ nav-container .footer, nav .container .footer {
   transition: all 0.5s;
   transition-delay: 0.5s;
 }
-#contact-us .contact-info[data-animate=true] {
+#contact-us .info-form-wrapper .contact-info[data-animate=true] {
   transform: translateY(0px);
   opacity: 1;
   visibility: visible;
 }
-#contact-us .contact-from {
+#contact-us .info-form-wrapper .contact-from {
   display: flex;
   flex-direction: column;
   margin-top: 90px;
@@ -811,12 +821,17 @@ nav-container .footer, nav .container .footer {
   transition: all 0.5s;
   transition-delay: 1s;
 }
-#contact-us .contact-from[data-animate=true] {
+@media (min-width: 992px) {
+  #contact-us .info-form-wrapper .contact-from {
+    width: 65%;
+  }
+}
+#contact-us .info-form-wrapper .contact-from[data-animate=true] {
   transform: translateY(0px);
   opacity: 1;
   visibility: visible;
 }
-#contact-us .contact-from .input {
+#contact-us .info-form-wrapper .contact-from .input {
   border: 2px solid #e3e3e3;
   padding: 10px 24px;
   border-radius: 20px;
@@ -824,31 +839,31 @@ nav-container .footer, nav .container .footer {
   -moz-border-radius: 20px;
   margin-bottom: 1rem;
 }
-#contact-us .contact-from .input::placeholder {
+#contact-us .info-form-wrapper .contact-from .input::placeholder {
   font-family: IRANSans-UltraLight;
   color: #999;
 }
 
-each-info, #contact-us .contact-info .each-info {
+each-info, #contact-us .info-form-wrapper .contact-info .each-info {
   display: flex;
   height: 46px;
   margin-bottom: 30px;
 }
-each-info:last-child, #contact-us .contact-info .each-info:last-child {
+each-info:last-child, #contact-us .info-form-wrapper .contact-info .each-info:last-child {
   margin-bottom: 0px;
 }
-each-info .icon, #contact-us .contact-info .each-info .icon {
+each-info .icon, #contact-us .info-form-wrapper .contact-info .each-info .icon {
   fill: #ff5959;
   width: 24px;
 }
-each-info .info, #contact-us .contact-info .each-info .info {
+each-info .info, #contact-us .info-form-wrapper .contact-info .each-info .info {
   margin-right: 16px;
 }
-each-info .info li:first-child, #contact-us .contact-info .each-info .info li:first-child {
+each-info .info li:first-child, #contact-us .info-form-wrapper .contact-info .each-info .info li:first-child {
   font-family: vazir-Bold;
   font-size: 16px;
 }
-each-info .info li:last-child, #contact-us .contact-info .each-info .info li:last-child {
+each-info .info li:last-child, #contact-us .info-form-wrapper .contact-info .each-info .info li:last-child {
   font-family: IRANSans-Medium;
   font-size: 14px;
   color: #777777;
