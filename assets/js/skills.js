@@ -1,15 +1,17 @@
 
-let skills, skillOffset, skillHeight;
+let skills,skillOffset, skillHeight;
 
 skills = document.querySelectorAll('.skill');
 skillOffset = document.getElementById('skills').offsetTop;
 skillHeight = document.getElementById('skills').offsetHeight;
 
 
-function addPercentToSkill() {
+function addPercentToSkill(skills) {
     //console.log('you reached');
     skills.forEach(
         element => {
+            
+            
             //get progress digit from data attr
             let progrss = element.dataset.progress;
 
@@ -23,6 +25,8 @@ function addPercentToSkill() {
             //add style to node
             progressNode.style.width = progrss;
             progressDigit.textContent = progrss;
+            
+            element.dataset.animate = "true";
 
         }
     );
@@ -32,5 +36,6 @@ function addPercentToSkill() {
 export {
     addPercentToSkill,
     skillOffset,
-    skillHeight
+    skillHeight,
+    skills
 }

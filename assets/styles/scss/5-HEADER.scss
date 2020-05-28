@@ -16,6 +16,12 @@ header {
     .content {
         @extend header-content;
     }
+    
+    
+    
+    @media (min-width: 992px) {
+        display: none;
+    }
 
 }
 
@@ -36,27 +42,8 @@ header-content {
     }
     
     
-    #color-mode{
-        position: relative;
-        height: 20px;
-        width: 20px;
-        svg{
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            
-            visibility: visible;
-            opacity: 1;
-            transition: all 0.5s;
-            width: 16px;
-            //display: none;
-            
-            &.activate{
-                //display: block;
-                visibility: hidden;
-                opacity: 0;
-            }
-        }
+    .header-color-mode{
+        @extend color-mode;
     }
     
     

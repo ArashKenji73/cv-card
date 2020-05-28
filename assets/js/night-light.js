@@ -1,33 +1,68 @@
-let night, light, HTMLNode;
+let nightHeader, 
+    lightHeader, 
+    nightNav, 
+    lightNav,
+    HTMLNode;
 
 
 
-night = document.getElementById('night');
-light = document.getElementById('light');
+nightHeader = document.querySelectorAll('.header-color-mode .night')[0];
+lightHeader = document.querySelectorAll('.header-color-mode .light')[0];
+
+
+nightNav = document.querySelectorAll('.nav-color-mode .night')[0];
+lightNav = document.querySelectorAll('.nav-color-mode .light')[0];
+
+
+
 
 HTMLNode = document.getElementsByTagName('HTML')[0];
 
 
 
+
+function Light() {
+    nightHeader.classList.remove('activate');
+    lightHeader.classList.add('activate');
+    
+    
+    nightNav.classList.remove('activate');
+    lightNav.classList.add('activate');
+    
+    HTMLNode.dataset.theme = 'light';
+}
+
+function Dark() {
+    lightHeader.classList.remove('activate');
+    nightHeader.classList.add('activate');
+    
+    
+    lightNav.classList.remove('activate');
+    nightNav.classList.add('activate');
+
+    HTMLNode.dataset.theme = 'night';
+}
+
 function lightDark() {
-    light.addEventListener('click', function () {
-        
-        
-        
-        night.classList.remove('activate');
-        light.classList.add('activate');
-        
-        HTMLNode.dataset.theme = 'light';
-        
+    lightHeader.addEventListener('click', function () {
+        Light();
     });
 
-    night.addEventListener('click', function () {
-        light.classList.remove('activate');
-        night.classList.add('activate');
-        
-        HTMLNode.dataset.theme = 'night';
+    nightHeader.addEventListener('click', function () {
+        Dark();
+    });
+    
+    
+    lightNav.addEventListener('click', function () {
+        Light();
+    });
+
+    nightNav.addEventListener('click', function () {
+        Dark();
     });
 }
 
 
-export{lightDark}
+export {
+    lightDark
+}

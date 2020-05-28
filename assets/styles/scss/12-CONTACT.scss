@@ -1,0 +1,94 @@
+#contact-us {
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+
+        transform: translateY(100px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        transition-delay: 0.5s;
+
+
+        &[data-animate='true'] {
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .each-info {
+            @extend each-info;
+        }
+    }
+
+    .contact-from {
+        display: flex;
+        flex-direction: column;
+        margin-top: 90px;
+        
+        
+        transform: translateY(100px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        transition-delay: 1s;
+
+
+        &[data-animate='true'] {
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        .input {
+            border: 2px solid #e3e3e3;
+            padding: 10px 24px;
+            @include border-radius(20px);
+            margin-bottom: 1rem;
+
+            &::placeholder {
+                font-family: IRANSans-UltraLight;
+                color: #999;
+            }
+        }
+    }
+}
+
+
+
+each-info {
+    display: flex;
+    height: 46px;
+    margin-bottom: 30px;
+    //background: #eee;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    .icon {
+        fill: $light-pink;
+        width: 24px;
+    }
+
+    .info {
+        margin-right: 16px;
+
+        li {
+            &:first-child {
+                font-family: vazir-Bold;
+                font-size: 16px;
+            }
+
+            &:last-child {
+                font-family: IRANSans-Medium;
+                font-size: 14px;
+                color: #777777;
+            }
+        }
+    }
+
+}

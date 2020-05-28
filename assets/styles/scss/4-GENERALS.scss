@@ -16,6 +16,10 @@ body {
     font-family: sans-serif;
     overflow-x: hidden;
     width: 100vw;
+
+    @media (min-width: 992px) {
+        background: $body-bg;
+    }
 }
 
 
@@ -85,8 +89,29 @@ html[data-theme="night"] {
         }
     }
 
+    #contact-us .contact-info .each-info .info li:last-child {
+        color: #b9b9b9;
+    }
 
 
+    each-info .info li:first-child,
+    #contact-us .contact-info .each-info .info li:first-child {
+        color: #e8e8e8;
+    }
+
+
+
+
+    .contact-from {
+        .input {
+            border-color: #3c3c3c !important;
+            background: transparent;
+
+            &::placeholder {
+                color: #cccccc !important;
+            }
+        }
+    }
 
 }
 
@@ -110,15 +135,29 @@ html[data-theme="night"] {
     }
 
     z-index: 1;
+
+    @media (min-width: 992px) {
+        justify-content: flex-end;
+        width: 1140px;
+        margin: 0 auto;
+    }
 }
 
 #content {
     width: calc(100vw - 30px);
     margin: 0px 15px;
     //background: red;
+
+    @media (min-width: 992px) {
+        width: calc(1140px - #{$navbar-width} + 15px);
+    }
 }
 
 ////////////////MAIN SKELETON ENDED
+
+
+
+
 .title-line {
     position: relative;
     font-family: vazir-bold;
@@ -165,14 +204,11 @@ html[data-theme="night"] {
     margin-bottom: 24px;
 }
 
-
-
 .text {
     font-family: IRANSans-UltraLight;
     line-height: 1.5em;
     font-size: 14px;
 }
-
 
 .cta-wrapper {
     display: flex;
@@ -187,7 +223,6 @@ html[data-theme="night"] {
     }
 }
 
-
 .btn {
     display: flex;
     align-items: center;
@@ -196,6 +231,7 @@ html[data-theme="night"] {
     color: #fff;
     font-size: 14px;
     font-family: IRANSans-Medium;
+    text-align: center;
 
     &.btn-rounded {
         @include border-radius(100px);
@@ -217,7 +253,6 @@ html[data-theme="night"] {
 
 }
 
-
 section {
     padding: 65px 40px 60px;
     margin: 15px 0px;
@@ -225,7 +260,25 @@ section {
     background: $section-bg;
 }
 
+color-mode {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    svg {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.5s;
+        width: 16px;
+        fill: $white;
+        //display: none;
 
-
-
-
+        &.activate {
+            //display: block;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}

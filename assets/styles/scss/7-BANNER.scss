@@ -4,6 +4,10 @@
     justify-content: center;
     background: $main-color;
     height: 476px;
+    
+    @media (min-width: 992px) {
+        height: 510px;
+    }
 
     .title {
         font-size: 36px;

@@ -1,3 +1,13 @@
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
 
 .skill {
     height: 36px;
@@ -5,6 +15,16 @@
     position: relative;
     height: auto;
     margin-bottom: 2.5rem;
+    
+    @media (min-width: 992px) {
+        width: 46%;
+    }
+    
+    &[data-animate="false"] {
+        .progress {
+            width: 0% !important;
+        }
+    }
 
     .header {
         direction: ltr;
@@ -34,16 +54,15 @@
             top: 0px;
             height: 100%;
             background: $light-pink;
-            width: 0%;
-            transition: all 1.1s cubic-bezier(0.905, -0.600, 0.400, 1.650);
+            transition: all 0.4s cubic-bezier(0.905, -0.600, 0.400, 1.650);
         }
     }
 }
 
 @for $i from 1 through 4 {
-  .skill:nth-child(#{$i}) {
-    .progress{transition-delay: 0.03s * $i;}
-  }
+    .skill:nth-child(#{$i}) {
+        .progress {
+            transition-delay: 0.1s * $i;
+        }
+    }
 }
-
-
