@@ -10,6 +10,9 @@
 
 
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     //padding: $body-padding;
@@ -30,13 +33,14 @@ html[data-theme="night"] {
             background: $body-dark-bg;
         }
     }
-    
+
     .site-wrapper {
         background: $body-dark-bg;
     }
 
     section {
         background: $section-dark-bg;
+        box-shadow: none;
     }
 
     header {
@@ -67,6 +71,11 @@ html[data-theme="night"] {
 
     nav {
         background: $section-dark-bg;
+    }
+
+    .about-wrapper .profile-img,
+    nav .profile-img {
+        background: $dark-profile-img-bg;
     }
 
     .skill {
@@ -105,9 +114,6 @@ html[data-theme="night"] {
         color: #e8e8e8;
     }
 
-
-
-
     .contact-from {
         .input {
             border-color: #3c3c3c !important;
@@ -126,6 +132,11 @@ html[data-theme="night"] {
 
 
 ////////////////MAIN SKELETON
+.about-wrapper .profile-img,
+nav .profile-img {
+    background: $light-profile-img-bg;
+}
+
 .site-wrapper {
     display: flex;
     width: fit-content;
@@ -156,6 +167,8 @@ html[data-theme="night"] {
 
     @media (min-width: 992px) {
         width: calc(1140px - #{$navbar-width} + 15px);
+        margin: 0px 30px;
+        margin-left: 0px;
     }
 }
 
@@ -170,6 +183,11 @@ html[data-theme="night"] {
     font-size: 24px;
     margin-bottom: 48px;
     margin-right: 12px;
+
+
+    @media (min-width: 992px) {
+        margin-bottom: 70px;
+    }
 
     &::before {
         position: absolute;
@@ -264,12 +282,19 @@ section {
     margin: 15px 0px;
     @include border-radius($border-radius);
     background: $section-bg;
+
+
+    @media (min-width: 992px) {
+        margin-bottom: $section-margin-bottom;
+        box-shadow: 0px 6px 15px 0px rgba(74, 99, 231, .2);
+    }
 }
 
 color-mode {
     position: relative;
     height: 16px;
     width: 16px;
+
     svg {
         position: absolute;
         top: 0px;

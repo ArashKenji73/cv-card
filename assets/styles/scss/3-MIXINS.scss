@@ -15,9 +15,21 @@
 
 
 @mixin profile-img($img-size) {
+    position: relative;
     width: $img-size;
     height: $img-size;
-    background: $light-pink;
+    
+    img{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include border-radius($img-size);
+    }
     @include border-radius($img-size);
 }
 
