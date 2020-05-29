@@ -801,6 +801,14 @@ nav-container .footer, nav .container .footer {
   transition-delay: 0.4s;
 }
 
+.skill:nth-child(5) .progress {
+  transition-delay: 0.5s;
+}
+
+.skill:nth-child(6) .progress {
+  transition-delay: 0.6s;
+}
+
 .services-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -847,6 +855,7 @@ nav-container .footer, nav .container .footer {
 .services-wrapper .service .service-title {
   font-size: 18px;
   font-family: vazir-Bold;
+  text-align: center;
 }
 .services-wrapper .service .service-desc {
   text-align: center;
