@@ -102,6 +102,8 @@ function fadeIn(el) {
 //if scrolled to skills this function called
 function scrollInit() {
     window.onscroll = function () {
+        
+        console.log(window.window.scrollY)
 
         //fadeIn About us
         scrollFunction(fadeIn, aboutSec, aboutOffset);

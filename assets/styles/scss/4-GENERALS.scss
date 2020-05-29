@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 500px;
 }
 
 body {
@@ -129,14 +130,13 @@ html[data-theme="night"] {
 
 
 
-
-
-////////////////MAIN SKELETON
 .about-wrapper .profile-img,
 nav .profile-img {
     background: $light-profile-img-bg;
 }
 
+
+////////////////MAIN SKELETON
 .site-wrapper {
     display: flex;
     width: fit-content;
